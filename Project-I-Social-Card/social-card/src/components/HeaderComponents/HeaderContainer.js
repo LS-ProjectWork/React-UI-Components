@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 
-HeaderContainer = () => {
+const HeaderContainer = () => {
     <ImageThumbnail />;
     <HeaderTitle />;
     <HeaderContent />;
