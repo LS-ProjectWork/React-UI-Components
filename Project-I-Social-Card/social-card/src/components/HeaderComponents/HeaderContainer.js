@@ -2,7 +2,11 @@ import React from 'react';
 import './Header.css';
 
 const HeaderContainer = () => {
-    <ImageThumbnail />;
-    <HeaderTitle />;
-    <HeaderContent />;
+    return (
+        <div className="social-card">
+            <ImageThumbnail />;
+            <HeaderTitle />;
+            <HeaderContent />;
+        </div>
+    )
 }
