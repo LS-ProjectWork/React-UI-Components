@@ -6,6 +6,7 @@ import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay'
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+
 const App = () => {
   return (
     <div>
@@ -13,6 +14,9 @@ const App = () => {
       <NumberButton />
       <ActionButton />
       <ActionButton />
+      <NumberButton buttonStyle="btn-wide" text={'clear'} />
+      {numbers.map(num => <NumberButton text={num}/>)}
+      <NumberButton buttonStyle="btn-wide" text={0} />
     </div>
   );
 };
