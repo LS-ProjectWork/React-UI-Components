@@ -11,13 +11,19 @@ class App extends React.Component{
     super(props)
     this.state = {totalDisplay: 0}
   }
+  handleDisplay = num => {
+    this.setState({totalDisplay: num})
+  }
+  handleReset = numb => {
+    this.setState({totalDisplay: 0})
+  }
   render() {
     return (
       <div>
         <CalculatorDisplay display={this.state.totalDisplay} />
-        <NumberButton buttonStyle="btn-wide" text={'clear'} />
-        {numbers.map(num => <NumberButton text={num}/>)}
-        <NumberButton buttonStyle="btn-wide" text={0} />
+        <NumberButton buttonStyle="btn-wide" handleDisplay={this.handleReset}  text={'clear'} />
+        {numbers.map(num => <NumberButton handleDisplay={this.handleDisplay} text={num}/>)}
+        <NumberButton buttonStyle="btn-wide" handleDisplay={this.handleDisplay} text={0} />
       </div>
     );
   }
